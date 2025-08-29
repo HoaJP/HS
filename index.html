@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HamsaTest</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "ha-green": "#CDFF9A",
+                        "ha-dark": "#07272E",
+                        "ha-darker": "#1a3d2e",
+                        "ha-accent": "#4a7c59",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mega-menu {
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mega-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav-item.active {
+            border-bottom: 2px solid #1f2937;
+        }
+    </style>
+</head>
+
+<body class="">
+    <!-- Header -->
+    <header class="bg-ha-green px-4 py-2 h-[65px] lg:py-4 lg:px-12 lg:h-[86px] relative z-[9999]">
+        <div class="flex items-center justify-between max-w-full mx-auto">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="flex flex-col lg:mt-[-10px] text-xl lg:text-3xl font-bold text-ha-dark">
+                    <div
+                        class="relative after:absolute after:content-[''] after:border-b-4 after:border-ha-dark after:left-8 after:top-4 after:w-[30px] lg:after:left-12 lg:after:top-6 lg:after:border-b-[6px] lg:after:w-[46px]">
+                        HA
+                    </div>
+                    <div class="mt-[-8px]">SPORT</div>
+                </div>
+            </div>
+            <!-- <div class="flex items-center">
+                <img src="./assets/Logo.png" alt="logo"
+                >
+            </div> -->
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-12">
+                <a href="#" class="text-ha-dark text-xl font-bold pb-1">HOME</a>
+                <div class="">
+                    <a href="#" id="catalogs-btn" class="text-ha-dark text-xl font-bold ">CATALOGS</a>
+                    <!-- Mega Menu -->
+                    <div id="mega-menu"
+                        class="mega-menu absolute top-[68px] left-0 bg-white shadow-2xl rounded-lg p-8 w-screen z-10000">
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                            <!-- Activity -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-chevron-right mr-2"></i>
+                                    Activity
+                                </h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><a href="#" class="hover:text-gray-900">Skiing</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Snowboarding</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Winter Sports</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Equipment -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-chevron-right mr-2"></i>
+                                    Equipment
+                                </h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><a href="#" class="hover:text-gray-900">Skis</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Snowboards</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Accessories</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Women's -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-chevron-right mr-2"></i>
+                                    Women's
+                                </h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><a href="#" class="hover:text-gray-900">Jackets</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Pants</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Base Layers</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Men's -->
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
+                                    <i class="fas fa-chevron-right mr-2"></i>
+                                    Men's
+                                </h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><a href="#" class="hover:text-gray-900">Jackets</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Pants</a></li>
+                                    <li><a href="#" class="hover:text-gray-900">Base Layers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Product Images -->
+                        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-8 pt-8 border-t">
+                            <div class="text-center">
+                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                                    <img src="./assets/images/boot.png"
+                                        alt="Boots" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <p class="text-sm font-medium">Boots</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                                    <img src="./assets/images/helmets.png"
+                                        alt="Helmets" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <p class="text-sm font-medium">Helmets</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                                    <img src="./assets/images/goggle.png"
+                                        alt="Goggles" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <p class="text-sm font-medium">Goggles</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                                    <img src="./assets/images/binding.png"
+                                        alt="Binding" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <p class="text-sm font-medium">Binding</p>
+                            </div>
+                            <div class="text-center lg:block hidden">
+                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
+                                    <img src="./assets/images/image.png"
+                                        alt="Skis" class="w-full h-24 object-cover rounded">
+                                </div>
+                                <p class="text-sm font-medium">Skis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="text-ha-dark text-xl font-bold">BLOG</a>
+                <a href="#" class="text-ha-dark text-xl font-bold">SHOP</a>
+                <a href="#" class="text-ha-dark text-xl font-bold">CONTACT US</a>
+            </nav>
+
+            <!-- Desktop Icons -->
+            <div class="hidden lg:flex items-center space-x-6">
+                <img src="./assets/images/Search.png" alt="" class="w-[24px] h-[24px]" />
+                <img src="./assets/images/Vector.png" alt="" class="w-[24px] h-[24px]" />
+                <img src="./assets/images/Account circle.png" alt="" class="w-[24px] h-[24px]" />
+                <img src="./assets/images/🦆 icon _cart_.png" alt="" class="w-[24px] h-[24px]" />
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-ha-dark">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4">
+            <nav class="flex flex-col space-y-4 items-end">
+                <a href="#" class="text-ha-dark font-medium">HOME</a>
+                <a href="#" class="text-ha-dark font-medium">CATALOGS</a>
+                <a href="#" class="text-ha-dark font-medium">BLOG</a>
+                <a href="#" class="text-ha-dark font-medium">SHOP</a>
+                <a href="#" class="text-ha-dark font-medium">CONTACT US</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- section hero -->
+    <main class="flex flex-col bg-ha-dark px-4 lg:px-12 lg:flex-row h-[656px]">
+        <!-- Left Content -->
+        <div class="flex flex-1 relative overflow-hidden">
+            <!-- Social Media Sidebar  -->
+            <div
+                class="hidden relavtive after:absolute after:content-['']  after:border-r-2 after:border-ha-green after:left-16 after:top-0 after:h-screen lg:flex flex-col justify-center h-[656px] gap-40 mt-24 z-10">
+                <div class="text-ha-green -rotate-90 origin-left ml-[8px]">
+                    ©2023 Dotcreativemarket
+                </div>
+                <div class="flex flex-col space-y-8">
+                    <div class="text-ha-green text-sm font-medium -rotate-90 origin-left ml-[8px]">
+                        FOLLOW US
+                    </div>
+                    <img src="./assets/images/linkdn.png" alt="" class="w-[20px] h-[20px]" />
+                    <img src="./assets/images/facebook.png" alt="" class="w-[20px] h-[20px]" />
+                    <img src="./assets/images/twiter.png" alt="" class="w-[20px] h-[20px]" />
+                    <img src="./assets/images/insta.png" alt="" class="w-[20px] h-[20px]" />
+                </div>
+            </div>
+
+            <div class="text-white space-y-6">
+                <!-- Large Background Number -->
+                <div class="relative top-1/2 transform -translate-y-1/2 left-0">
+                    <span
+                        class="font-bold text-[240px] text-ha-green opacity-30 absolute -top-60 left-0 lg:top-[-450px] lg:-left-20 lg:text-[402px]">01</span>
+                    <div class="relative z-10">
+                        <p
+                            class="text-ha-green text-sm whitespace-nowrap absolute left-2 -top-20 lg:-top-28 lg:-left-16 lg:text-lg">
+                            BEGIN BREAKING YOUR LIMIT
+                        </p>
+                        <p
+                            class="text-4xl lg:text-6xl font-bold leading-tight whitespace-nowrap absolute left-2 -top-12 lg:-top-16 lg:-left-16">
+                            KNOW YOUR<br />
+                            LIMITS. SKI<br />
+                            BEYOND THEM.
+                        </p>
+                    </div>
+                </div>
+
+                <button
+                    class="absolute left-0 top-[225px] lg:top-[480px] lg:left-[130px] bg-lime-300 text-gray-900 px-8 py-3 font-semibold">
+                    VIEW MORE
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Content - Hero Image -->
+        <div class="flex-1 relative">
+            <img src="./assets/images/ski.png" alt="Professional skier in action"
+                class="w-full h-[343px] lg:h-[576px] object-cover z-10" />
+
+            <!-- Navigation Arrows - Desktop Only -->
+            <div class="flex absolute bottom-8 right-0">
+                <img src="./assets/images/arrow-left.png" alt="" class="w-[54px] h-[16px]" />
+                <img src="./assets/images/arrow-right.png" alt="" class="w-[54px] h-[16px]" />
+            </div>
+        </div>
+    </main>
+    <script>
+        const catalogsBtn = document.getElementById('catalogs-btn');
+        const megaMenu = document.getElementById('mega-menu');
+        let megaMenuTimeout;
+
+        catalogsBtn.addEventListener('mouseenter', () => {
+            clearTimeout(megaMenuTimeout);
+            megaMenu.classList.add('active');
+            catalogsBtn.classList.add('active');
+        });
+
+        catalogsBtn.addEventListener('mouseleave', () => {
+            megaMenuTimeout = setTimeout(() => {
+                megaMenu.classList.remove('active');
+                catalogsBtn.classList.remove('active');
+            }, 100);
+        });
+
+        megaMenu.addEventListener('mouseenter', () => {
+            clearTimeout(megaMenuTimeout);
+        });
+
+        megaMenu.addEventListener('mouseleave', () => {
+            megaMenu.classList.remove('active');
+            catalogsBtn.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
