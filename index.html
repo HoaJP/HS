@@ -71,80 +71,72 @@
             <nav class="hidden lg:flex items-center space-x-12">
                 <a href="#" class="text-ha-dark text-xl font-bold pb-1">HOME</a>
                 <div class="">
-                    <a href="#" id="catalogs-btn" class="text-ha-dark text-xl font-bold ">CATALOGS</a>
+                    <a href="#" id="catalogs-btn" class="text-ha-dark text-xl font-bold">CATALOGS</a>
                     <!-- Mega Menu -->
                     <div id="mega-menu"
-                        class="mega-menu absolute top-[68px] left-0 bg-white shadow-2xl rounded-lg p-8 w-screen z-10000">
-                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                            <!-- Activity -->
-                            <div class="space-y-4">
-                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
-                                    <i class="fas fa-chevron-right mr-2"></i>
-                                    Activity
-                                </h3>
-                            </div>
-
-                            <!-- Equipment -->
-                            <div class="space-y-4">
-                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
-                                    <i class="fas fa-chevron-right mr-2"></i>
-                                    Equipment
-                                </h3>
-                            </div>
-
-                            <!-- Women's -->
-                            <div class="space-y-4">
-                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
-                                    <i class="fas fa-chevron-right mr-2"></i>
-                                    Women's
-                                </h3>
-                            </div>
-
-                            <!-- Men's -->
-                            <div class="space-y-4">
-                                <h3 class="text-lg font-semibold text-gray-900 flex items-center">
-                                    <i class="fas fa-chevron-right mr-2"></i>
-                                    Men's
-                                </h3>
-                            </div>
-                        </div>
-
-                        <!-- Product Images -->
-                        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-8 pt-8 border-t">
-                            <div class="text-center">
-                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
-                                    <img src="./assets/images/boot.png"
-                                        alt="Boots" class="w-full h-24 object-cover rounded">
+                        class="mega-menu absolute top-[68px] left-0 bg-white shadow-2xl rounded-lg px-12 py-12 w-screen z-10000">
+                        <div class="grid grid-cols-6 gap-4">
+                            <!-- sidebar mega menu -->
+                            <div class="col-span-1">
+                                <div class="flex flex-col w-[200px]">
+                                    <div
+                                        class="h-[52px] space-x-6 flex items-center justify-between border-b-2 border-gray-300">
+                                        <span>Activity</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <div
+                                        class="h-[52px] space-x-6 flex items-center justify-between border-b-2 border-gray-300">
+                                        <span>Equipment</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <div
+                                        class="h-[52px] space-x-6 flex items-center justify-between border-b-2 border-gray-300">
+                                        <span>Women's</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                    <div
+                                        class="h-[52px] space-x-6 flex items-center justify-between border-b-2 border-gray-300">
+                                        <span>Men's</span> <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
                                 </div>
-                                <p class="text-sm font-medium">Boots</p>
                             </div>
-                            <div class="text-center">
-                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
-                                    <img src="./assets/images/helmets.png"
-                                        alt="Helmets" class="w-full h-24 object-cover rounded">
+                            <!-- images -->
+                            <div class="col-span-5 grid grid-cols-5 gap-6">
+                                <div class="text-center">
+                                    <div class="bg-gray-100 rounded-lg mb-2">
+                                        <img src="./assets/images/boot.png" alt="Boots"
+                                            class="w-[250px] h-[250px] object-cover rounded" />
+                                    </div>
+                                    <p class="text-sm font-medium">Boots</p>
                                 </div>
-                                <p class="text-sm font-medium">Helmets</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
-                                    <img src="./assets/images/goggle.png"
-                                        alt="Goggles" class="w-full h-24 object-cover rounded">
+                                <div class="text-center">
+                                    <div class="bg-gray-100 rounded-lg mb-2">
+                                        <img src="./assets/images/helmets.png" alt="Helmets"
+                                            class="w-[250px] h-[250px] object-cover rounded" />
+                                    </div>
+                                    <p class="text-sm font-medium">Helmets</p>
                                 </div>
-                                <p class="text-sm font-medium">Goggles</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
-                                    <img src="./assets/images/binding.png"
-                                        alt="Binding" class="w-full h-24 object-cover rounded">
+                                <div class="text-center">
+                                    <div class="bg-gray-100 rounded-lg mb-2">
+                                        <img src="./assets/images/goggle.png" alt="Goggles"
+                                            class="w-[250px] h-[250px] object-cover rounded" />
+                                    </div>
+                                    <p class="text-sm font-medium">Goggles</p>
                                 </div>
-                                <p class="text-sm font-medium">Binding</p>
-                            </div>
-                            <div class="text-center lg:block hidden">
-                                <div class="bg-gray-100 rounded-lg p-4 mb-2">
-                                    <img src="./assets/images/image.png"
-                                        alt="Skis" class="w-full h-24 object-cover rounded">
+                                <div class="text-center">
+                                    <div class="bg-gray-100 rounded-lg mb-2">
+                                        <img src="./assets/images/binding.png" alt="Binding"
+                                            class="w-[250px] h-[250px] object-cover rounded" />
+                                    </div>
+                                    <p class="text-sm font-medium">Binding</p>
                                 </div>
-                                <p class="text-sm font-medium">Skis</p>
+                                <div class="text-center lg:block hidden">
+                                    <div class="bg-gray-100 rounded-lg mb-2">
+                                        <img src="./assets/images/image.png" alt="Skis"
+                                            class="w-[250px] h-[250px] object-cover rounded" />
+                                    </div>
+                                    <p class="text-sm font-medium">Skis</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -185,7 +177,7 @@
         <div class="flex flex-1 relative overflow-hidden">
             <!-- Social Media Sidebar  -->
             <div
-                class="hidden relavtive after:absolute after:content-['']  after:border-r-2 after:border-ha-green after:left-16 after:top-0 after:h-screen lg:flex flex-col justify-center h-[656px] gap-40 mt-24 z-10">
+                class="hidden relavtive after:absolute after:content-[''] after:border-r-2 after:border-ha-green after:left-16 after:top-0 after:h-screen lg:flex flex-col justify-center h-[656px] gap-40 mt-24 z-10">
                 <div class="text-ha-green -rotate-90 origin-left ml-[8px]">
                     ©2023 Dotcreativemarket
                 </div>
@@ -228,8 +220,7 @@
 
         <!-- Right Content - Hero Image -->
         <div class="flex-1 relative">
-            <img src="./assets/images/ski.png" alt="Skier"
-                class="w-full h-[343px] lg:h-[576px] object-cover z-10" />
+            <img src="./assets/images/ski.png" alt="Skier" class="w-full h-[343px] lg:h-[576px] object-cover z-10" />
 
             <!-- Navigation Arrows - Desktop Only -->
             <div class="flex absolute bottom-8 right-0">
@@ -239,32 +230,31 @@
         </div>
     </main>
     <script>
-
-        // mega menu 
-        const catalogsBtn = document.getElementById('catalogs-btn');
-        const megaMenu = document.getElementById('mega-menu');
+        // mega menu
+        const catalogsBtn = document.getElementById("catalogs-btn");
+        const megaMenu = document.getElementById("mega-menu");
         let megaMenuTimeout;
 
-        catalogsBtn.addEventListener('mouseenter', () => {
+        catalogsBtn.addEventListener("mouseenter", () => {
             clearTimeout(megaMenuTimeout);
-            megaMenu.classList.add('active');
-            catalogsBtn.classList.add('active');
+            megaMenu.classList.add("active");
+            catalogsBtn.classList.add("active");
         });
 
-        catalogsBtn.addEventListener('mouseleave', () => {
+        catalogsBtn.addEventListener("mouseleave", () => {
             megaMenuTimeout = setTimeout(() => {
-                megaMenu.classList.remove('active');
-                catalogsBtn.classList.remove('active');
+                megaMenu.classList.remove("active");
+                catalogsBtn.classList.remove("active");
             }, 100);
         });
 
-        megaMenu.addEventListener('mouseenter', () => {
+        megaMenu.addEventListener("mouseenter", () => {
             clearTimeout(megaMenuTimeout);
         });
 
-        megaMenu.addEventListener('mouseleave', () => {
-            megaMenu.classList.remove('active');
-            catalogsBtn.classList.remove('active');
+        megaMenu.addEventListener("mouseleave", () => {
+            megaMenu.classList.remove("active");
+            catalogsBtn.classList.remove("active");
         });
     </script>
 </body>
